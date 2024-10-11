@@ -1,0 +1,122 @@
+/* body{
+    background-color: pink;
+} */
+
+
+.card-body{
+    font-family: "SUSE", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.navbar{
+    height: 5rem;
+    background-color:white;
+    font-family: 'Lora', serif;
+}
+
+.fa-compass{
+    color: #fe424d;
+    font-size:2rem;
+}
+
+.nav-link{
+    color: #222222 !important;
+}
+
+.f-info-links a{
+    text-decoration:none;
+    color:#222222;
+}
+.f-info-links a:hover{
+    text-decoration:underline;
+    /* color:#222222; */
+}
+
+.f-info-links{
+    width: 100%;
+}
+
+.f-info-socials,.f-info-links,.copy {
+    width:100%;
+    margin:0.3rem;
+    
+}
+
+.f-info-socials i{
+    margin-right: 1rem;
+    font-size:1.2rem;
+    /* margin-left:1rem; */
+}
+.f-info{
+    text-align:center;
+    height:8rem;
+    background-color:
+    #f0f0f0;   
+    display:flex; 
+    flex-direction:column;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items:center;
+}
+
+.card-img-top:hover{
+    filter: blur(1px);
+    transform: scale(0.95);
+}
+
+.show-img{
+    height:50vh !important;
+    width:90vw !important;
+}
+
+/* Review Card Styles */
+.review-card {
+    position: relative;
+    transition: box-shadow 0.3s ease-in-out; /* Animation for card shadow */
+    border-radius: 8px; /* To make the card's corners slightly rounded */
+}
+
+/* Shadow effect when the card is hovered */
+.review-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Cross (Close) Button Styles */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #dc3545; /* Red color for the close button */
+    cursor: pointer;
+    display: none; /* Hidden initially */
+    opacity: 0; /* Start with invisible */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth fade-in and movement */
+}
+
+/* Show the close button with fade-in and slight zoom on hover */
+.review-card:hover .close-button {
+    display: block;
+    opacity: 1; /* Fade-in effect */
+    transform: scale(1.1); /* Slightly zoom in the cross button */
+}
+
+/* Close button hover effect */
+.close-button:hover {
+    color: #ff0000; /* Change color on hover */
+    transform: scale(1.2); /* Zoom in a bit more on hover */
+}
+
+/* Delete form margin removal */
+.delete-form {
+    margin: 0; /* To remove any default margins around the form */
+}
+
+#map {
+   height: 60vh;
+   width:100%;
+  }

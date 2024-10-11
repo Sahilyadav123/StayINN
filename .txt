@@ -1,0 +1,40 @@
+stateless protocol- does not require the server to store the server info or session info 
+stateful protocol- require the server to save the status and session info 
+since http is a stateless protocol therefore we need to use express session to save the information 
+
+connect-flash is used to pop up any message 
+
+//Hashing 
+for every input there is fixed output 
+input to output possible but output to input impossible 
+
+
+<form action="/signup" class="sign-in-form needs-validation " novalidate method="post">
+                        <h2 class="title">Sign in</h2>
+                        <div class="input-field">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Username" required class="form-control"/>
+                            <div class="invalid-feedback">Please provide a title.</div>
+                            <div class="valid-feedback">Title looks good</div>
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Password" class="form-control" required />
+                        </div>
+                        <input type="submit" value="Login" class="btn solid" class="form-control" required/>
+                        <p class="social-text">Or Sign in with social platforms</p>
+                        <div class="social-media">
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-google"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </form>

@@ -1,0 +1,65 @@
+<% layout("/layouts/boilerplate") %>
+
+<head>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-..." crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-8 offset-2">
+            <h1>Create new listing</h1>
+            <form action="/listings" method="POST" class="my-3 needs-validation" novalidate enctype="multipart/form-data">
+                <div class="my-2">
+                    <label for="title" class="form-label">Title</label>
+                    <input name="title" id="title" placeholder="enter title" type="text" class="form-control" required>
+                    <div class="invalid-feedback">Please provide a title.</div>
+                    <div class="valid-feedback">Title looks good</div>
+                </div>
+
+                <div class="my-2">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea name="description" id="description" placeholder="enter description" class="form-control" required></textarea>
+                    <div class="invalid-feedback">Please provide a description.</div>
+                </div>
+
+                <div class="my-2">
+                    <label for="image" class="form-label">Image </label>
+                    <input name="image" id="image" placeholder="Choose image" type="file" class="form-control " required >
+                    <div class="invalid-feedback">This will take a default image if not added</div>
+                    
+                </div>
+
+                <div class="my-2">
+                    <label for="price" class="form-label">Price</label>
+                    <input name="price" id="price" placeholder="enter price" type="number" class="form-control" required>
+                    <div class="invalid-feedback">Please provide a valid price.</div>
+                </div>
+
+                <div class="my-2">
+                    <label for="location" class="form-label">Location</label>
+                    <input name="location" id="location" placeholder="enter location" type="text" class="form-control" required>
+                    <div class="invalid-feedback">Please provide a location.</div>
+                </div>
+
+                <div class="my-2">
+                    <label for="country" class="form-label">Country</label>
+                    <input name="country" id="country" placeholder="enter country" type="text" class="form-control" required>
+                    <div class="invalid-feedback">Please provide a country.</div>
+                </div>
+
+                <button class="btn btn-danger my-3 w-25 d-block mx-auto" type="submit">Add</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+
+    <!-- Validation Script -->
+    <script src="/js/script.js">
+        
+    </script>
+    
+</body>

@@ -1,0 +1,27 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="row " style="min-height: 90vh; display: flex; align-items: center; background-image: url('https://images.unsplash.com/photo-1460467820054-c87ab43e9b59?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2VsY29tZXxlbnwwfHwwfHx8MA%3D%3D'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="col-12 col-md-6 offset-md-3" style="background-color: rgba(255, 255, 255, 0.8);  border-radius: 15px;">
+        <div class="card shadow" style="border: none; background-color: transparent;">
+            <div class="card-body">
+                <h1 class="my-auto text-danger text-decoration-underline text-center" style="font-size: 2.5rem; color: #FF6347;">Login on StayInn</h1>
+                <form action="/login" method="post" class="needs-validation" novalidate style="font-size: 1.1rem;">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input name="username" id="username" placeholder="Enter your username" type="text" class="form-control" required style="border: 2px solid #FF6347; border-radius: 5px;">
+                        <div class="invalid-feedback">Please provide a username.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input name="password" id="password" placeholder="Enter your password" type="password" class="form-control" required style="border: 2px solid #FF6347; border-radius: 5px;">
+                        <div class="invalid-feedback">Please provide a password.</div>
+                    </div>
+                    <button class="btn btn-success my-3 w-100" type="submit" style="background-color: #FF6347; border: none; font-weight: bold; font-size: 1.2rem;">Login</button>    
+                </form>
+                <div class="text-center">
+                    <p class="mt-3">New to StayInn? <a href="/signup" class="text-primary" style="color: #FF6347;">Sign Up</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

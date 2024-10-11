@@ -1,0 +1,141 @@
+<% layout("/layouts/boilerplate") %>
+
+    <style>
+        #filters {
+            padding: 5px;
+
+        }
+
+        .filter {
+            margin-top: 1rem;
+            margin-right: 2rem;
+            opacity: 0.7;
+
+        }
+
+        .filter:hover {
+            opacity: 1;
+            color: red;
+            cursor: pointer;
+
+            /* Deeper shadow on hover */
+
+        }
+
+        .tax-toggle {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* Adds shadow */
+            border: 1px solid black;
+            border-radius: 8px  ;
+            /* Rounded corners */
+            padding: 8px;
+            /* Padding around the switch */
+            background-color: #f8f9fa;
+            margin-top: 20px;
+            /* Light background color */
+        }
+
+        .form-check-input:checked {
+            background-color: #0d6efd;
+            /* Change to your desired color when checked */
+            border-color: #0d6efd;
+            /* Change border color when checked */
+        }
+    </style>
+
+
+    <body>
+        <div id="filters" class=" d-flex justify-content-between align-items-center ms-4">
+            <div class="filter d-flex flex-column align-items-center">
+                <div><i class="fa fa-bed" aria-hidden="true"></i></div>
+                <p>Rooms</p>
+            </div>
+            <div class="filter d-flex flex-column align-items-center">
+                <div><i class="fa fa-building" aria-hidden="true"></i></div>
+                <p>Cities</p>
+            </div>
+            <div class="filter d-flex flex-column align-items-center">
+                <div><i class="fa fa-fire" aria-hidden="true"></i></div>
+                <p>Trending</p>
+            </div>
+            <div class="filter d-flex flex-column align-items-center">
+                <div><i class="fa fa-swimmer" aria-hidden="true"></i></div>
+                <p>Beaches</p>
+            </div>
+            <div class="filter d-flex flex-column align-items-center">
+                <div><i class="fa fa-ship" aria-hidden="true"></i></div>
+                <p>Voyage</p>
+            </div>
+            <div class="filter d-flex flex-column align-items-center">
+                <div><i class="fa fa-cloud" aria-hidden="true"></i></div>
+                <p>Season sale</p>
+            </div>
+            <div class="filter d-flex flex-column align-items-center">
+                <div><i class="fa fa-taxi" aria-hidden="true"></i></div>
+                <p>Transportation</p>
+            </div>
+            <div class="filter d-flex flex-column align-items-center">
+                <div><i class="fa fa-tree" aria-hidden="true"></i></div>
+                <p>Mountains</p>
+            </div>
+            <div class="tax-toggle mb-3">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Display total after Taxes</label>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row mx-2">
+            <% for(let listing of allListings){%>
+
+                <div class="mx-2 my-2 col-4" style="width: 19rem;">
+
+                    <a href="/listings/<%= listing._id %>">
+                        <img class="card-img-top" src="<%= listing.image.url %>" alt="Card image cap"
+                            style="border-radius: 8px; width: 100%; height: 200px; object-fit: cover;">
+
+                    </a>
+                    <div class="card-body" style="padding-top: 10px; padding-bottom: 5  px;">
+                        <p class="card-text mb-1" style="margin-bottom: 0;">
+                            <%= listing.title %>
+                        </p>
+                        <b class="card-text ">
+                            <%= listing.country %>
+                        </b>
+                        <div class="d-flex">
+                            <p class="card-text my-1" style="margin-bottom: 0;">₹ <%= listing.price %>
+                            </p>
+                            <p class="mt-1  content"> + <%= listing.price*0.18 %> <i>(including GST 18%)</i></p>
+                        </div>
+
+                    </div>
+
+                </div>
+                <% } %>
+        </div>
+
+    </body>
+
+    <script>
+        let priceToggle = document.getElementById("flexSwitchCheckDefault");
+        const contents = document.querySelectorAll('.content');
+        priceToggle.addEventListener("click", () => {
+            contents.forEach((content) => {
+                if (!priceToggle.checked) {
+                    content.style.display = 'none';
+                } else {
+                    content.style.display = 'block';
+
+                }
+            });
+
+
+        });
+
+        contents.forEach((content) => {
+            content.style.display = 'none';
+        });
+    </script>
